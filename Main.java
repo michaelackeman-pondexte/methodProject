@@ -17,7 +17,7 @@ class Main {
     int newLevel = level(levels, userLevel);
     System.out.println("After playing dungeon 6, your avatar is now at level " + newLevel);
 
-    boolean skill = newskill()
+    String skill = newSkill(newLevel);
     System.out.println(skill);
 
   }
@@ -34,15 +34,16 @@ class Main {
     return newLevel; 
   }
 
-  static boolean newSkill( int newLevel)
+  static String newSkill(int newLevel)
   {
+    String skill;
     if(newLevel > 100)
     {
-      Skill = "Due to your level being " + newLevel + ", you have unlocked Flurry Rush";
+      skill = "Due to your level now being " + newLevel + ", you have unlocked Flurry Rush.";
     }else{
-      Skill = "Due to your level being " + newLevel + ", you still have Flurry";
-      return skill;
+      skill = "Due to your level now being " + newLevel + ", you still have Flurry. Once your level  is greater than 100, you will unlock Flurry Rush";
     }
+    return skill;
   }
 
 
